@@ -13,7 +13,7 @@ public class Calculator extends JFrame implements ActionListener {
 
     public Calculator() {
         setTitle("Calculator");
-        setSize(400, 400);
+        setSize(540, 540);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -26,6 +26,7 @@ public class Calculator extends JFrame implements ActionListener {
         display = new JTextField();
         display.setHorizontalAlignment(JTextField.RIGHT);
         display.setEditable(false);
+        display.setFont(new Font("Arial", Font.PLAIN, 48));
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(4, 4));
@@ -40,6 +41,7 @@ public class Calculator extends JFrame implements ActionListener {
         for (String text : buttons) {
             JButton button = new JButton(text);
             button.addActionListener(this);
+            button.setFont(new Font("Arial", Font.BOLD, 24));
             panel.add(button);
         }
 
